@@ -1,0 +1,105 @@
+
+
+
+<div class=" nav-maincontainer hidden maincontainer-inventory">
+
+    
+    <div class="header">
+        <div class="pagetitle color-mc">
+            <span>Inventory</span>
+        </div>
+        <div class="inventory-tabs">
+            <div class=" inventory-tabs-con ">
+                <div cid="items" class="hidden inventory-tab-widget btn-shadow">
+                    <span id="inventory-tab-item">Items</span>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="inventory-widgets">
+            <div class=" widget btn-shadow">
+                <span id="add-book"><i class="fas fa-book"></i>Add Book</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left color-sc">
+            <div class="inventory-list">
+                <div class="search">
+                    <input id="inventory-search" type="text" placeholder="Type Here">
+                    <span id="inventory-searchicon"><i class="fas fa-search"></i></span>
+                </div>
+                <div id="item-select-category" class="hidden select-category">
+                    <select name="category" id="inventory-item-category">
+                        <option value="all">All</option>
+                        <option value="sanitized">Sanitized</option>
+                        <option value="unsanitized">Unsanitized</option>
+                    </select>
+                </div>
+                <div class="inventory-listcon">
+                    <div class="widget btn-shadow">
+                        <span>Book 1</span>
+                    </div>
+                    <div class="widget btn-shadow">
+                        <span>Book 2</span>
+                    </div>
+                    <div class="widget btn-shadow">
+                        <span>Book 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class=" item">
+                <div class="item-con">
+                    <div class=" view-inventory color-mc">
+                        <div class="con">
+                            <div class="viewheader">
+                                <span cid="" class="inventory-view-id">Book Name</span>
+                                <i id="inventory-view-close" class="fas fa-times"></i>
+                            </div>
+                            <div class="viewdetails">
+                                <div class="iventory-view-image">
+                                    <img src="lib//images//book.jpg" alt="">
+                                </div>
+                                <div class="inventory-view-details">
+                                    <div class="row">
+                                        <span id="inventory-view-author">Author Name</span>
+                                        <span id="inventory-view-year-published">Year Published</span>
+                                        <span></span>
+                                        <div class="view-qty">
+                                            <span>Qty: </span>
+                                            <span id="inventory-view-qty">5</span>
+                                            <div class="view-change-qty" >
+                                                <span id="inventory-view-qty-subtract"><i class="fas fa-minus"></i></span>
+                                                <span id="inventory-view-qty-add"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </div>
+                                        <span></span>
+                                        <div class="view-description">
+                                            <span>Description: </span>
+                                            <textarea name="description" id="inventory-view-description" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="viewfooter">
+                                <button disabled id="inventory-view-delete" class="btn-shadow" >Delete</button>
+                                <button id="inventory-view-update" class="btn-shadow" >Update</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

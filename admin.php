@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CP469</title>
+    <title>Admin</title>
     <base href="<?php echo($rootLocation); ?>" target="_self">
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
@@ -18,6 +18,20 @@
 </head>
 <body>
     
+    
+    
+    <div id="content">
+      <?php
+        include "./views/admin_header.html";
+        include "./views/admin_navigation.html";
+      ?>
+      <div id="maincontainer">
+        <?php
+          include "pages/admin_view.php";
+        ?>
+      </div>
+    </div>
+
 
 
 

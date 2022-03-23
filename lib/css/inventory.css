@@ -1,0 +1,551 @@
+
+
+.maincontainer-inventory{
+    padding-left: 10px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
+.maincontainer-inventory > .header{
+    /* background-color: lightblue; */
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    border-radius: 10px 0px 10px 0px;
+    flex-direction: row;
+}
+.maincontainer-inventory > .header > .inventory-tabs{
+    /* background-color: var(--BTN_COLOR); */
+    position: relative;
+    width: 77%;
+    height: 50px;
+    border-radius: 10px 0px 10px 0px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.inventory-tabs > .inventory-tabs-con{
+    /* background-color: lightblue; */
+    position: relative;
+    width: 100%;
+    height: 35px;
+    padding-left: 7px;      
+    background-image: linear-gradient(to top, var(--MAIN_COLOR),whitesmoke 90%);
+    background-blend-mode: screen;
+    display: flex;
+    flex-direction: row;
+}
+.inventory-tabs-con > .inventory-tab-widget{
+    /* background-color: wheat; */
+    position: relative;
+    width: 190px;
+    height: 100%;
+    margin-left: 4px;
+    margin-right: 4px;
+    opacity: 0.75;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0); 
+}
+.inventory-tab-widget.selected{
+    opacity: 0.95;
+}
+.inventory-tab-widget:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+.inventory-tab-widget > i{
+    position: absolute;
+    font-size: 1.4em;
+    left: 4px;
+    top: 4px;
+    padding: 2px;
+}
+.inventory-tab-widget > i:hover{
+    transform: none;
+}
+.inventory-tab-widget > span{
+    position: relative;
+    font-size: 1.8em;
+    padding: 5px;
+    cursor: pointer;
+}
+.header > .pagetitle{
+    /* background-color: var(--BTN_COLOR);; */
+    min-width: 215px;
+    width: 20%;
+    height: 50px;
+    border-radius: 10px 0px 10px 0px;
+    text-align: center;
+    align-content: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+.pagetitle > span{
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.header > .inventory-widgets{
+    /* background-color: wheat; */
+    position: absolute;
+    right: 0px;
+    top: 31px;
+    width: 78%;
+    height: 40px;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+.inventory-widgets > .widget{
+    position: relative;
+    width: 180px;
+    height: 27px;
+    margin: 5px;
+    margin-left: 8px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 0px rgb(182, 212, 194);
+    cursor: pointer;
+}
+    .widget:hover{
+        transform: scale(1.1);
+    }
+.widget > span{
+    font-size: 1.3em;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+.widget > span > i{
+    position: relative;
+    font-size: 1.1em;
+    left: -4px;
+    top: 1px;
+    margin: 0.5px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+.widget > span > i:hover{
+    transform: none;
+}
+
+.maincontainer-inventory > .container{
+    position: relative;
+    /* background-color: lightblue; */
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* 
+    inventory List
+*/
+
+.maincontainer-inventory > .container > .left{
+    /* background-color: var(--SUB_COLOR); */
+    position: relative;
+    min-width: 215px;
+    width: 20%;
+    height: 99%;
+    margin-right: 5px;
+    border-radius: 15px 0px 15px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.left > .inventory-list{
+    /* background-color: lightblue; */
+    position: relative;
+    width: 96.5%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.inventory-list > .search{
+    position: relative;
+    width: 95%;
+    height: 30px;
+    margin: 2px 2px 2px 0px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: visible;
+}
+#inventory-search{
+    position: relative;
+    width: 85%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 6px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    cursor:text;
+}
+#inventory-searchicon{
+    width: 5%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+#inventory-searchicon > i{
+    color: white;
+    font-size: 1.9em;
+}
+#inventory-searchicon > i:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.select-category{
+    position: relative;
+    width: 80%;
+    height: 17px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    margin-top: -5px;
+}
+#inventory-category{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 6px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    border: none;
+    outline: none;
+    cursor:pointer;
+}
+#inventory-item-category{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 6px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    border: none;
+    outline: none;
+    cursor:pointer;
+}
+#inventory-vendor-category{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 6px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    border: none;
+    outline: none;
+    cursor:pointer;
+}
+.inventory-list > .inventory-listcon{
+    width: 97%;
+    height: 100%;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.inventory-listcon > .widget{
+    position: relative;
+    min-width: 98%;
+    min-height: 25px;                   
+    border-radius: 15px;
+    margin-bottom: 2px;
+    padding: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    overflow:hidden;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--BTN_COLOR);
+}
+.inventory-listcon > .widget:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px var(--WIDGET_SELECTED_COLOR);
+    z-index: 5;                                       
+}
+.inventory-listcon > .widget.selected{
+    box-shadow: 0px 0px 7px 0px var(--WIDGET_SELECTED_COLOR);
+    z-index: 5;                                         
+}
+.inventory-listcon > .widget > span{
+    /* background-color: wheat; */
+    position: relative;
+    margin: 1px;
+    padding-left: 5px;
+    padding-right: 10px;
+    width: 95%;
+    height: 97.5%;
+    font-size: 1.4em;
+    border-radius: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.inventory-listcon > .widget > span:hover{
+    /* background-color: wheat; */
+    position: relative;
+    overflow:visible;
+    cursor: pointer;
+}
+
+
+.maincontainer-inventory > .container > .right{
+    /* background-color: lightblue; */
+    width: 76.5%;
+    height: 99%;
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.maincontainer-inventory > .container > .right > .item{
+    width: 100%;
+    height: 100%;
+}
+.maincontainer-inventory > .container > .right > .item > .item-con{
+    /* background-color: lightblue; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+/* item page*/
+.maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory{
+    position: relative;
+    /* background-color: lightblue;  */
+    width: 750px;
+    height: 425px;
+    /* margin: 5px; */
+    /* padding: 5px; */
+    border-radius: 20px;
+    overflow: hidden;
+}
+.maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory >.con{
+    /* background-color: wheat; */
+    border-radius: 15px;
+    position: relative;
+    width: 98.5%;
+    height: 99%;
+    padding-bottom: 2px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewheader{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+.maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewheader > span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 3.3em;
+}
+.maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewheader > i{
+    position: absolute;
+    font-weight: bold;
+    font-size: 2.3em;
+    float: top;
+    right: 5px;
+    margin: 2px;
+    cursor: pointer;
+}
+    .maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewheader > i:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+.maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewfooter{
+    /* background-color: lightblue; */
+    position: relative;
+    width: 95%;
+    height: 30px;
+    bottom: 10px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+    .maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewfooter > button{
+        position: relative;
+        width: 100%;
+        height: 100%;;
+        margin-top: 5px;
+        border-radius: 15px;
+        margin: 5px;
+        outline: none;
+        border: none;
+        cursor: pointer;   
+        box-shadow: 0px 0px 7px 0px rgba(255, 255, 255);
+        /* background-color: var(--BTN_COLOR); */
+    }
+    .maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewfooter > button:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+    .maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewfooter > button:disabled{
+        cursor:not-allowed;
+        transform: none;
+    }
+.maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewdetails{
+    /* background-color: lightblue; */
+    position: relative;
+    width: calc(100% - 10px);
+    height: auto;
+    padding: 10px 10px 0px 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+    .view-inventory > .con > .viewdetails > .iventory-view-image{
+        position: relative;
+        width: 30%;
+        height: 100%;
+        /* min-height: 200px;
+        max-height: 200px; */
+        margin-top: 5px;
+    }
+        .view-inventory > .con > .viewdetails > .iventory-view-image > img{
+            position: relative;
+            width: 100%;
+            min-height: 300px;
+            max-height: 300px;
+        }
+    .inventory-view-details{
+        position: relative;
+        width: 70%;
+        height: 100%;
+        margin-top: 5px;
+        padding: 0px 10px 0px 10px;
+    }
+    .inventory-view-details > .row{
+        /* background-color: lightblue; */
+        position: relative;
+        width: 100%;
+        min-height: 30px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .inventory-view-details > .row > span{
+        position: relative;
+        color: white;
+        font-size: 1em;
+        left: 0;
+        float: top;
+        padding-left: 5px;
+    }
+    .inventory-view-details > .row > .view-qty{
+        /* background-color: lightblue; */
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+        .inventory-view-details > .row > .view-qty > span{
+            position: relative;
+            color: white;
+            font-size: 1em;
+            left: 0;
+            float: top;
+            margin: 0px 10px 0px 0px;
+            padding-left: 5px;
+        }
+        .inventory-view-details > .row > .view-qty > .view-change-qty{
+            /* background-color: lightblue; */
+            position: relative;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+        }
+            .inventory-view-details > .row > .view-qty > .view-change-qty > span{
+                position: relative;
+                color: white;
+                font-size: 1em;
+                left: 0;
+                float: top;
+                margin: 0px 10px 0px 0px;
+            }
+            .inventory-view-details > .row > .view-qty > .view-change-qty > span > i:hover{
+                cursor: pointer;
+                transform: scale(1.35);
+            }
+    .inventory-view-details > .row > .view-description{
+        /* background-color: lightblue; */
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+        .inventory-view-details > .row > .view-description > span{
+            position: relative;
+            color: white;
+            font-size: 1em;
+            left: 0;
+            float: top;
+            margin: 0px 10px 0px 0px;
+            padding-left: 5px;
+        }
+        .inventory-view-details > .row > .view-description > textarea{
+            position: relative;
+            font-size: 1em;
+            resize: none;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden{
+    display: none;
+}

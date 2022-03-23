@@ -1,4 +1,4 @@
 <?php
-    include "views/home.html";
     include "views/defaults.html";
+    include "views/guest_view.html";
 ?>

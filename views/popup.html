@@ -1,0 +1,55 @@
+
+<div class="popup-con hidden">
+
+    <div class="login-con hidden">
+        <div id="login-container ">
+            <span id="login-close" >
+                <i class="fas fa-times"></i>
+            </span>
+            <form id="login-form" method="post" name="myform">
+                <span>Email :</span>
+                <input type="email" name="username" id="loginform-email"/>
+                <span>Password :</span>
+                <input type="password" name="password" id="loginform-password"/>
+                <input type="button"  value="Login" id="submit" onclick="check_login()"/>
+
+                <div class="s-con">
+                    <label for="">Not a member?  </label>
+                    <span id="login-to-signup">Signup</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="register-con hidden">
+        <div id="register-container">
+            <span id="register-close" >
+                <i class="fas fa-times"></i>
+            </span>
+            <form id="register-form" method="post" name="myform">
+                <span>First Name :</span>
+                <input type="text" name="name" id="registerform-firstname"/>
+                <span>Last Name :</span>
+                <input type="text" name="name" id="registerform-lastname"/>
+                <span>Email :</span>
+                <input type="email" name="username" id="registerform-email"/>
+                <span>Password :</span>
+                <input type="password" name="password" id="registerform-password"/>
+                <input type="button"  value="Register" id="register-submit" onclick="register_member()"/>
+
+                <div class="l-con">
+                    <label for="">Already a member?  </label>
+                    <span id="register-to-login">Login</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>

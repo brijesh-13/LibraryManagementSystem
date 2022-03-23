@@ -4,6 +4,7 @@
     --BTN_COLOR: #5294e2;
     
     --FONT_COLOR: white;
+    --GUEST_FONT_COLOR: #3E69C0;
     --TITLE_COLOR: #3E69C0;
 
     --ORANGE_PALETTE: #A57F59;
@@ -126,6 +127,7 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background-color: #3b5998; */
 }
 .nav-maincontainer-{
     width: 100%;

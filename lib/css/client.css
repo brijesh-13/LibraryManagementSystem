@@ -1,0 +1,425 @@
+
+.maincontainer-client{
+    padding-left: 10px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
+.maincontainer-client > .header{
+    /* background-color: lightblue; */
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    border-radius: 10px 0px 10px 0px;
+    flex-direction: row;
+}
+.header > .filler{
+    /* background-color: var(--BTN_COLOR); */
+    width: 77%;
+    height: 50px;
+    border-radius: 10px 0px 10px 0px;
+    margin-left: 10px;
+}
+.header > .pagetitle{
+    /* background-color: var(--BTN_COLOR);; */
+    width: 20%;
+    height: 50px;
+    border-radius: 10px 0px 10px 0px;
+    text-align: center;
+    align-content: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+.pagetitle > span{
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.header > .accwidgets{
+    /* background-color: wheat; */
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    width: 78%;
+    height: 40px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.accwidgets > .widget{
+    /* background-color: lightblue; */
+    position: relative;
+    width: 180px;
+    height: 27px;
+    margin: 5px;
+    margin-left: 8px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 7px 0px rgba(255, 255, 255);
+    cursor: pointer;
+}
+    .widget:hover{
+        transform: scale(1.1);
+    }
+.widget > span{
+    font-size: 1.3em;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+.widget > span > i{
+    position: relative;
+    font-size: 1.1em;
+    left: -4px;
+    top: 1px;
+    margin: 0.5px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.maincontainer-client > .container{
+    position: relative;
+    /* background-color: lightblue; */
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* 
+    client List
+*/
+.container > .left{
+    /* background-color: var(--SUB_COLOR); */
+    position: relative;
+    width: 20%;
+    height: 99%;
+    margin-right: 5px;
+    border-radius: 15px 0px 15px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.left > .acclist{
+    /* background-color: lightblue; */
+    position: relative;
+    width: 96.5%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.acclist > .search{
+    width: 95%;
+    height: 30px;
+    margin: 2px;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: visible;
+}
+#accsearch{
+    width: 85%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 6px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    cursor:text;
+}
+#searchicon{
+    width: 5%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+#searchicon > i{
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+.acclist > .acclistcon{
+    width: 97%;
+    height: 100%;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.acclistcon > .widget{
+    position: relative;
+    width: 98%;
+    height: 25px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    box-shadow: 0px 0px 7px 0px rgba(255, 255, 255);
+}
+.acclistcon > .widget > span{
+    /* background-color: wheat; */
+    position: absolute;
+    margin: 1px;
+    padding-left: 5px;
+    padding-right: 10px;
+    width: 95%;
+    height: 97.5%;
+    font-size: 1.4em;
+    border-radius: 15px;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+    .acclistcon > .widget > span:hover{
+        transform: scale(1.1);
+    }
+
+
+/* 
+    View client Details
+*/
+.container > .right{
+    /* background-color: lightblue; */
+    width: 76.5%;
+    height: 99%;
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.container > .right > .viewacc{
+    position: relative;
+    width: 48%;
+    height: 350px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+}
+.viewacc >.con{
+    /* background-color: wheat; */
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.viewacc > .con > .viewheader{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+.viewacc > .con > .viewheader > span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 3.3em;
+    /* color: black; */
+}
+.viewacc > .con > .viewheader > i{
+    position: absolute;
+    font-weight: bold;
+    font-size: 2.3em;
+    float: top;
+    right: 5px;
+    margin: 2px;
+    cursor: pointer;
+    /* color: black; */
+}
+.viewacc > .con > .viewfooter{
+    /* background-color: lightblue; */
+    position: relative;
+    width: 95%;
+    height: 50px;
+    bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+    .viewfooter > button{
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin-top: 5px;
+        border-radius: 15px;
+        padding: 5px;
+        outline: none;
+        border: none;
+        cursor: pointer;   
+        box-shadow: 0px 0px 7px 0px rgba(255, 255, 255);
+        /* background-color: var(--BTN_COLOR); */
+    }
+    .viewfooter > button:disabled{
+        cursor:not-allowed;
+    }
+.viewacc > .con > .viewdetails{
+    /* background-color: lightblue; */
+    position: relative;
+    width: 94%;
+    height: auto;
+    left: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.viewdetails > .name{
+    position: relative;
+    width: 99%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+    .viewdetails > .name > .firstname{
+        position: relative;
+        width: 49%;
+        height: 90.5%;
+        margin: 2px;
+        margin-right: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+        .viewdetails > .name > .firstname > label{
+            position: relative;
+            color: white;
+            font-size: 1em;
+            left: 0;
+            float: top;
+        }
+        .viewdetails > .name > .firstname > input{
+            position: relative;
+            color: black;
+            font-size: 1.1em;
+            left: 0;
+            border-radius:  5px;
+            border: none;
+            padding: 2px;
+            padding-left: 3px;
+            padding-right: 3px;
+            cursor: text;
+        }
+    .viewdetails > .name > .lastname{
+        position: relative;
+        width: 48.5%;
+        height: 90.5%;
+        margin: 2px;
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+        .viewdetails > .name > .lastname > label{
+            position: relative;
+            color: white;
+            font-size: 1em;
+            left: 0;
+            float: top;
+        }
+        .viewdetails > .name > .lastname > input{
+            position: relative;
+            color: black;
+            font-size: 1.1em;
+            left: 0;
+            border-radius:  5px;
+            border: none;
+            padding: 2px;
+            padding-left: 3px;
+            padding-right: 3px;
+            cursor: text;
+        }
+.viewdetails > .email{
+    position: relative;
+    width: 98.5%;
+    height: 50px;
+    margin: 2px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+    .viewdetails > .email > label{
+        position: relative;
+        color: white;
+        font-size: 1em;
+        left: 0;
+        float: top;
+    }
+    .viewdetails >  .email > input{
+        position: relative;
+        color: black;
+        font-size: 1.1em;
+        left: 0;
+        border-radius:  5px;
+        border: none;
+        padding: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+        cursor: text;
+    }
+.viewdetails > .password{
+    position: relative;
+    width: 98.5%;
+    height: 50px;
+    margin: 2px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+    .viewdetails > .password > label{
+        position: relative;
+        color: white;
+        font-size: 1em;
+        left: 0;
+        float: top;
+    }
+    .viewdetails > .password > input{
+        position: relative;
+        color: black;
+        font-size: 1.1em;
+        left: 0;
+        border-radius:  5px;
+        border: none;
+        padding: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+        cursor: text;
+    }
+    .viewdetails > .password > #viewpassword{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
