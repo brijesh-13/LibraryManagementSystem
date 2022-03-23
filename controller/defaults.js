@@ -1,6 +1,6 @@
 const domain = 'http://localhost/CP476_Final_Project/';
 
-
+const LIBRARY = new Library();
 
 
 //random 9 digit numbers
