@@ -33,7 +33,7 @@ password varchar(50)
 );
 
 //insert row
-insert into tbl_account(id,first_name,last_name,email,password) values('admin','Admin','','noreply.cp476@gmail.com','admin');
+insert into tbl_account(id,first_name,last_name,email,password) values('brijesh','Admin','','noreply.cp476@gmail.com','admin');
 
 
 //create book table
@@ -47,4 +47,10 @@ description longtext,
 image text,
 client_id varchar(50)
 );
+
+
+
+
+
+
 

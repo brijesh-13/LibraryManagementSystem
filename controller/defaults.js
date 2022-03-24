@@ -7,9 +7,9 @@ const LIBRARY = new Library();
 function rng09(){
     return Math.floor((Math.random() * 9) + 0);
 }
-// generates account ID
-function rngAccountId(){
-    return 'A-' + rng09() +  rng09() + rng09() + rng09() + rng09() + rng09() + rng09() + rng09() + rng09();
+// generates client ID
+function rngClientId(){
+    return 'C-' + rng09() +  rng09() + rng09() + rng09() + rng09() + rng09() + rng09() + rng09() + rng09();
 }
 // generates book ID
 function rngAccountId(){
