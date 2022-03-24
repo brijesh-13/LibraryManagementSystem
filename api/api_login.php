@@ -32,6 +32,33 @@ if(isset($_GET['function'])) {
         }
     }
     
+    if($_GET['function'] == 'fetchAccounts'){
+        $query = "select * from tbl_account; ";
+        
+        $rs = mysqli_query($link , $query);
+        if(mysqli_num_rows($rs)>0){
+            $x = 0;
+            while($row = $rs->fetch_assoc()) {
+                $response[$x]['id'] = $row['id'];
+                $response[$x]['email'] = $row['email'];
+                $response[$x]['first_name'] = $row['first_name'];
+                $response[$x]['last_name'] = $row['last_name'];
+                $response[$x]['password'] = $row['password'];
+                $x++;
+            }
+
+            // $response['response'] = 'true';
+            $json_response = json_encode($response);
+            echo $json_response;
+            mysqli_close($link);
+        }else{
+            $response['response'] = 'error';
+            $json_response = json_encode($response);
+            echo $json_response;
+            mysqli_close($link);
+        }
+    }
+
     if($_GET['function'] == 'createAccount') {
         $id = $_GET['id'];
         $email = $_GET['email'];
@@ -54,6 +81,28 @@ if(isset($_GET['function'])) {
         }
     }
     
+    if($_GET['function'] == 'updateAccount') {
+        $id = $_GET['id'];
+        $email = $_GET['email'];
+        $first_name = $_GET['first_name'];
+        $last_name = $_GET['last_name'];
+        $password = $_GET['password'];
+
+        $query = "update tbl_account set first_name='$first_name', last_name='$last_name', email='$email', password='$password' where id='$id';"; 
+
+        if(mysqli_query($link , $query)){
+            $response['response'] = 'true';
+            $json_response = json_encode($response);
+            echo $json_response;
+            mysqli_close($link);
+        }else{
+            $response['response'] = 'error';
+            $json_response = json_encode($response);
+            echo $json_response;
+            mysqli_close($link);
+        }
+    }
+
     if($_GET['function'] == 'deleteAccount') {
         $id = $_GET['id'];
 

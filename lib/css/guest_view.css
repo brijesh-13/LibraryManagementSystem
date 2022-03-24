@@ -162,7 +162,8 @@
         display: flex;
         margin: 15px;
         flex-direction: column;
-        background-color: antiquewhite;
+        background-color: rgb(205, 222, 233);
+        border-radius: 20px;
     }
     .maincontainer-guest > .guest-con > .inventory-con > .column:hover {
         cursor: pointer;

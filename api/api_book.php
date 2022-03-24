@@ -11,18 +11,18 @@ if(isset($_GET['function'])) {
         if(mysqli_num_rows($rs)>0){
             $x = 0;
             while($row = $rs->fetch_assoc()) {
-                $response['id'] = $row['id'];
-                $response['title'] = $row['title'];
-                $response['author'] = $row['author'];
-                $response['year'] = $row['year'];
-                $response['qty'] = $row['qty'];
-                $response['description'] = $row['description'];
-                $response['image'] = $row['image'];
-                $response['client_id'] = $row['client_id'];
+                $response[$x]['id'] = $row['id'];
+                $response[$x]['title'] = $row['title'];
+                $response[$x]['author'] = $row['author'];
+                $response[$x]['year'] = $row['year'];
+                $response[$x]['qty'] = $row['qty'];
+                $response[$x]['description'] = $row['description'];
+                $response[$x]['image'] = $row['image'];
+                $response[$x]['client_id'] = $row['client_id'];
                 $x++;
             }
 
-            $response['response'] = 'true';
+            // $response['response'] = 'true';
             $json_response = json_encode($response);
             echo $json_response;
             mysqli_close($link);
@@ -38,8 +38,8 @@ if(isset($_GET['function'])) {
         $id = $_GET['id'];
         $title = $_GET['title'];
         $author = $_GET['author'];
-        $year = $_GET['year'];
-        $qty = $_GET['qty'];
+        $year = intval($_GET['year']);
+        $qty = intval($_GET['qty']);
         $description = $_GET['description'];
         $image = $_GET['image'];
         $client_id = $_GET['client_id'];
@@ -87,7 +87,7 @@ if(isset($_GET['function'])) {
     if($_GET['function'] == 'deleteBook') {
         $id = $_GET['id'];
 
-        $query = "delete from tbl_book where qty=2;"; 
+        $query = "delete from tbl_book where id='$id';"; 
 
         if(mysqli_query($link , $query)){
             $response['response'] = 'true';

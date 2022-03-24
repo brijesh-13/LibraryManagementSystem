@@ -133,15 +133,19 @@
     outline: none;
     cursor:text;
 }
-#searchicon{
+#client-searchicon{
     width: 5%;
     height: 100%;
     border: none;
     outline: none;
 }
-#searchicon > i{
+#client-searchicon > i{
     color: white;
     font-size: 2em;
+    cursor: pointer;
+}
+#client-searchicon > i:hover{
+    transform: scale(1.2);
     cursor: pointer;
 }
 .acclist > .acclistcon{
@@ -241,6 +245,10 @@
     cursor: pointer;
     /* color: black; */
 }
+.viewacc > .con > .viewheader > i:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
 .viewacc > .con > .viewfooter{
     /* background-color: lightblue; */
     position: relative;
@@ -294,6 +302,14 @@
     height: 50px;
     display: flex;
     flex-direction: row;
+}
+.viewdetails > div > input:disabled{
+    cursor: none;
+    color: whitesmoke;
+}
+.viewdetails > .name > div > input:disabled{
+    cursor: none;
+    color: whitesmoke;
 }
     .viewdetails > .name > .firstname{
         position: relative;

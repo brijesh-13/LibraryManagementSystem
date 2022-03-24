@@ -267,33 +267,21 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
+
 .inventory-listcon > .widget{
     position: relative;
-    min-width: 98%;
-    min-height: 25px;                   
+    width: 98%;
+    height: 25px;
     border-radius: 15px;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     padding: 1px;
     padding-left: 1px;
     padding-right: 1px;
-    overflow:hidden;
-    display: flex;
-    flex-direction: row;
-    background-color: var(--BTN_COLOR);
-}
-.inventory-listcon > .widget:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 0px var(--WIDGET_SELECTED_COLOR);
-    z-index: 5;                                       
-}
-.inventory-listcon > .widget.selected{
-    box-shadow: 0px 0px 7px 0px var(--WIDGET_SELECTED_COLOR);
-    z-index: 5;                                         
+    box-shadow: 0px 0px 7px 0px rgba(255, 255, 255);
 }
 .inventory-listcon > .widget > span{
     /* background-color: wheat; */
-    position: relative;
+    position: absolute;
     margin: 1px;
     padding-left: 5px;
     padding-right: 10px;
@@ -301,17 +289,12 @@
     height: 97.5%;
     font-size: 1.4em;
     border-radius: 15px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    overflow-x: hidden;
     cursor: pointer;
 }
-.inventory-listcon > .widget > span:hover{
-    /* background-color: wheat; */
-    position: relative;
-    overflow:visible;
-    cursor: pointer;
-}
+    .inventory-listcon > .widget > span:hover{
+        transform: scale(1.1);
+    }
 
 
 .maincontainer-inventory > .container > .right{
@@ -456,8 +439,23 @@
         display: flex;
         flex-direction: column;
     }
-    .inventory-view-details > .row > input{
+    .inventory-view-details > .row > div{
         position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .inventory-view-details > .row > div > span{
+        position: relative;
+        min-width: 60px;
+        max-width: 60px;
+        font-size: 1em;
+        left: 0;
+        padding-left: 5px;
+    }
+    .inventory-view-details > .row > div > input{
+        position: relative;
+        width: 100%;
         font-size: 1em;
         left: 0;
         float: top;
@@ -467,7 +465,7 @@
         margin-bottom: 2px;
         border-radius: 10px;
     }
-    .inventory-view-details > .row > input:disabled{
+    .inventory-view-details > .row > div >  input:disabled{
         color: whitesmoke;
     }
     .inventory-view-details > .row > .view-qty{
@@ -546,7 +544,233 @@
             color: whitesmoke;
         }
 
-
+.maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory{
+    position: relative;
+    /* background-color: lightblue;  */
+    width: 750px;
+    height: 425px;
+    /* margin: 5px; */
+    /* padding: 5px; */
+    border-radius: 20px;
+    overflow: hidden;
+}
+.maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory >.con{
+    /* background-color: wheat; */
+    border-radius: 15px;
+    position: relative;
+    width: 98.5%;
+    height: 99%;
+    padding-bottom: 2px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory > .con > .createheader{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+.maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory > .con > .createheader > span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 3.3em;
+}
+.maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory > .con > .createheader > i{
+    position: absolute;
+    font-weight: bold;
+    font-size: 2.3em;
+    float: top;
+    right: 5px;
+    margin: 2px;
+    cursor: pointer;
+}
+    .maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory > .con > .createheader > i:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+.maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory > .con > .createfooter{
+    /* background-color: lightblue; */
+    position: relative;
+    width: 95%;
+    height: 30px;
+    bottom: 10px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+    .maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory > .con > .createfooter > button{
+        position: relative;
+        width: 100%;
+        height: 100%;;
+        margin-top: 5px;
+        border-radius: 15px;
+        margin: 5px;
+        outline: none;
+        border: none;
+        cursor: pointer;   
+        box-shadow: 0px 0px 7px 0px rgba(255, 255, 255);
+        /* background-color: var(--BTN_COLOR); */
+    }
+    .maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory > .con > .createfooter > button:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+    .maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory > .con > .createfooter > button:disabled{
+        cursor:not-allowed;
+        transform: none;
+    }
+.maincontainer-inventory > .container > .right > .item > .item-con > .create-inventory > .con > .createdetails{
+    /* background-color: lightblue; */
+    position: relative;
+    width: calc(100% - 10px);
+    height: auto;
+    padding: 10px 10px 0px 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+    .create-inventory > .con > .createdetails > .iventory-create-image{
+        position: relative;
+        width: 30%;
+        height: 100%;
+        /* min-height: 200px;
+        max-height: 200px; */
+        margin-top: 5px;
+    }
+        .create-inventory > .con > .createdetails > .iventory-create-image > img{
+            position: relative;
+            width: 100%;
+            min-height: 300px;
+            max-height: 300px;
+        }
+    .inventory-create-details{
+        position: relative;
+        width: 70%;
+        height: 100%;
+        margin-top: 5px;
+        padding: 0px 10px 0px 10px;
+    }
+    .inventory-create-details > .row{
+        /* background-color: lightblue; */
+        position: relative;
+        width: 100%;
+        min-height: 30px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .inventory-create-details > .row > div{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .inventory-create-details > .row > div > span{
+        position: relative;
+        min-width: 60px;
+        max-width: 60px;
+        font-size: 1em;
+        left: 0;
+        padding-left: 5px;
+    }
+    .inventory-create-details > .row > div > input{
+        position: relative;
+        width: 100%;
+        font-size: 1em;
+        left: 0;
+        float: top;
+        padding-left: 5px;
+        outline: none;
+        border: none;
+        margin-bottom: 2px;
+        border-radius: 10px;
+    }
+    .inventory-create-details > .row > div >  input:disabled{
+        color: whitesmoke;
+    }
+    .inventory-create-details > .row > input:disabled{
+        color: whitesmoke;
+    }
+    .inventory-create-details > .row > .create-qty{
+        /* background-color: lightblue; */
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+        .inventory-create-details > .row > .create-qty > input[type="number"]{
+            position: relative;
+            width: 70px;
+            font-size: 0.9em;
+            left: 0;
+            float: top;
+            margin: 0px 10px 0px 5px;
+            padding-left: 5px;
+            outline: none;
+            border: none;
+            border-radius: 7px;
+            text-align: center;
+            color: black;
+        }
+        .inventory-create-details > .row > .create-qty > input[type="number"]:disabled{
+            color: whitesmoke;
+        }
+        .inventory-create-details > .row > .create-qty > .create-change-qty{
+            /* background-color: lightblue; */
+            position: relative;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+        }
+            .inventory-create-details > .row > .create-qty > .create-change-qty > span{
+                position: relative;
+                color: white;
+                font-size: 1em;
+                left: 0;
+                float: top;
+                margin: 0px 10px 0px 0px;
+            }
+            .inventory-create-details > .row > .create-qty > .create-change-qty > span > i:hover{
+                cursor: pointer;
+                transform: scale(1.35);
+            }
+    .inventory-create-details > .row > .create-description{
+        /* background-color: lightblue; */
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+        .inventory-create-details > .row > .create-description > span{
+            position: relative;
+            color: white;
+            font-size: 1em;
+            left: 0;
+            float: top;
+            margin: 0px 10px 0px 0px;
+            padding-left: 5px;
+        }
+        .inventory-create-details > .row > .create-description > textarea{
+            position: relative;
+            font-size: 1em;
+            resize: none;
+            border-radius: 10px;
+            padding: 5px;
+            color: black
+        }
+        .inventory-create-details > .row > .create-description > textarea:disabled{
+            color: whitesmoke;
+        }
+        
 
 
 

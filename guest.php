@@ -46,6 +46,9 @@
     <script src="lib/includes/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="lib/includes/jquery-ui.js" type="text/javascript"></script>
 
+    <script src="controller/js/api_login.js" type="text/javascript"></script>
+    <script src="controller/js/api_book.js" type="text/javascript"></script>
+    
     <script src="class/Library.js" type="text/javascript"></script>
     <script src="class/Book.js" type="text/javascript"></script>
     <script src="class/Client.js" type="text/javascript"></script>
@@ -53,8 +56,6 @@
     <script src="lib/js/colors.js" type="text/javascript"></script>
     <script src="controller/defaults.js" type="text/javascript"></script>
 
-    <script src="controller/js/api_login.js" type="text/javascript"></script>
-    <script src="controller/js/api_book.js" type="text/javascript"></script>
     
     <script src="lib/js/guest_view.js" type="text/javascript"></script>
 </body>

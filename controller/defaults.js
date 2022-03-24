@@ -12,7 +12,7 @@ function rngClientId(){
     return 'C-' + rng09() +  rng09() + rng09() + rng09() + rng09() + rng09() + rng09() + rng09() + rng09();
 }
 // generates book ID
-function rngAccountId(){
+function rngBookId(){
     return 'B-' + rng09() +  rng09() + rng09() + rng09() + rng09() + rng09() + rng09() + rng09() + rng09();
 }
 

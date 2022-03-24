@@ -1,6 +1,39 @@
 
-//navigate to the location of your mysql/bin > run 'mysqld' in cmd
+cd C:\Program Files\MySQL\MySQL Server 8.0\bin
 
+mysql -u bijju -p
+Pass1
+
+show databases;
+
+use cp476;
+
+show tables;
+
+select * from tbl_account;
+
+select * from tbl_book;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//navigate to the location of your mysql/bin > run 'mysqld' in cmd
+C:\Program Files\MySQL\MySQL Server 8.0\bin
 
 // use this to initialize root of the mysql, password set to admin
 mysqladmin -u root password admin
@@ -20,10 +53,7 @@ show databases;
 //create database
 create database cp476;
 
-//use database cp476
-use cp476;
-
-//create account table
+count table
 create table tbl_account(
 id varchar(50) primary key,
 first_name varchar(50),
@@ -31,10 +61,6 @@ last_name varchar(50),
 email varchar(50),
 password varchar(50)
 );
-
-//insert row
-insert into tbl_account(id,first_name,last_name,email,password) values('brijesh','Admin','','noreply.cp476@gmail.com','admin');
-
 
 //create book table
 create table tbl_book(
@@ -47,6 +73,10 @@ description longtext,
 image text,
 client_id varchar(50)
 );
+
+
+//insert row
+insert into tbl_account(id,first_name,last_name,email,password) values('brijesh','Admin','','noreply.cp476@gmail.com','admin');
 
 
 
