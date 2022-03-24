@@ -54,6 +54,6 @@
     <script src="controller/js/api_login.js" type="text/javascript"></script>
     <script src="controller/js/api_book.js" type="text/javascript"></script>
     
-    <script src="lib/js/index.js" type="text/javascript"></script>
+    <script src="lib/js/admin_view.js" type="text/javascript"></script>
 </body>
 </html>

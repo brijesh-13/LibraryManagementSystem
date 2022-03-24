@@ -52,12 +52,12 @@
             </div>
         </div>
         <div class="right">
-            <div class=" item">
+            <div class="hidden item">
                 <div class="item-con">
                     <div class=" view-inventory color-mc">
                         <div class="con">
                             <div class="viewheader">
-                                <span cid="" class="inventory-view-id">Book Name</span>
+                                <span cid="" class="inventory-view-id">Book ID</span>
                                 <i id="inventory-view-close" class="fas fa-times"></i>
                             </div>
                             <div class="viewdetails">
@@ -66,28 +66,29 @@
                                 </div>
                                 <div class="inventory-view-details">
                                     <div class="row">
-                                        <span id="inventory-view-author">Author Name</span>
-                                        <span id="inventory-view-year-published">Year Published</span>
+                                        <input disabled type="text" id="inventory-view-title" value="Book Title">
+                                        <input disabled type="text" id="inventory-view-author" value="Author Name">
+                                        <input disabled type="text" id="inventory-view-year-published" value="Year Published">
                                         <span></span>
                                         <div class="view-qty">
                                             <span>Qty: </span>
-                                            <span id="inventory-view-qty">5</span>
-                                            <div class="view-change-qty" >
+                                            <input disabled type="number" id="inventory-view-qty" value="0">
+                                            <!-- <div class="view-change-qty" >
                                                 <span id="inventory-view-qty-subtract"><i class="fas fa-minus"></i></span>
                                                 <span id="inventory-view-qty-add"><i class="fas fa-plus"></i></span>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <span></span>
                                         <div class="view-description">
                                             <span>Description: </span>
-                                            <textarea name="description" id="inventory-view-description" cols="30" rows="10"></textarea>
+                                            <textarea disabled name="description" id="inventory-view-description" cols="30" rows="10" ></textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="viewfooter">
-                                <button disabled id="inventory-view-delete" class="btn-shadow" >Delete</button>
-                                <button id="inventory-view-update" class="btn-shadow" >Update</button>
+                                <button id="inventory-view-delete" class="btn-shadow" >Delete</button>
+                                <button cid="edit" id="inventory-view-edit" class="btn-shadow" >Edit</button>
                             </div>
                         </div>
                     </div>

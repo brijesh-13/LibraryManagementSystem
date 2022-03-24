@@ -408,7 +408,7 @@
     }
     .maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewfooter > button:hover{
         cursor: pointer;
-        transform: scale(1.2);
+        transform: scale(1.05);
     }
     .maincontainer-inventory > .container > .right > .item > .item-con > .view-inventory > .con > .viewfooter > button:disabled{
         cursor:not-allowed;
@@ -456,13 +456,19 @@
         display: flex;
         flex-direction: column;
     }
-    .inventory-view-details > .row > span{
+    .inventory-view-details > .row > input{
         position: relative;
-        color: white;
         font-size: 1em;
         left: 0;
         float: top;
         padding-left: 5px;
+        outline: none;
+        border: none;
+        margin-bottom: 2px;
+        border-radius: 10px;
+    }
+    .inventory-view-details > .row > input:disabled{
+        color: whitesmoke;
     }
     .inventory-view-details > .row > .view-qty{
         /* background-color: lightblue; */
@@ -473,14 +479,22 @@
         flex-direction: row;
         margin-top: 10px;
     }
-        .inventory-view-details > .row > .view-qty > span{
+        .inventory-view-details > .row > .view-qty > input[type="number"]{
             position: relative;
-            color: white;
-            font-size: 1em;
+            width: 70px;
+            font-size: 0.9em;
             left: 0;
             float: top;
-            margin: 0px 10px 0px 0px;
+            margin: 0px 10px 0px 5px;
             padding-left: 5px;
+            outline: none;
+            border: none;
+            border-radius: 7px;
+            text-align: center;
+            color: black;
+        }
+        .inventory-view-details > .row > .view-qty > input[type="number"]:disabled{
+            color: whitesmoke;
         }
         .inventory-view-details > .row > .view-qty > .view-change-qty{
             /* background-color: lightblue; */
@@ -526,6 +540,10 @@
             resize: none;
             border-radius: 10px;
             padding: 5px;
+            color: black
+        }
+        .inventory-view-details > .row > .view-description > textarea:disabled{
+            color: whitesmoke;
         }
 
 
