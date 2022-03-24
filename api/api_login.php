@@ -18,8 +18,6 @@ if(isset($_GET['function'])) {
                 $response['first_name'] = $row['first_name'];
                 $response['last_name'] = $row['last_name'];
                 $response['email'] = $row['email'];
-                $response['password'] = $row['password'];
-                $response['access_level'] = $row['access_level'];
                 $x++;
             }
             $response['response'] = 'true';

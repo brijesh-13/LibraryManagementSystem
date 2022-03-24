@@ -1,18 +1,19 @@
 <?php
 
-  $server = "68.178.221.131";
-  $username = "iz18388gasfm";
-  $password = "Admin123";
-  $dbname = "CP476";
+$server = "localhost:3306";
+$username = "bijju";
+$password = "Pass1";
+$dbname = "cp476";
+
+
 
   // Create connection
-  $conn = mysqli_connect($server, $username, $password);
+  $link = mysqli_connect($server, $username, $password, $dbname);
 
   // Check connection
-  if (!$conn) {
+  if (!$link) {
     die("Connection failed: " . mysqli_connect_error());
   }
-  echo "Connected successfully";
 
 
   

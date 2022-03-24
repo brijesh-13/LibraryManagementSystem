@@ -1,14 +1,6 @@
 Gmail: noreply.cp476@gmail.com
 password: managementsys
 
-MySQL Database:
-Database name: CP476
-login: brijesh
-password: Cp476project
-
-cPanel Login: iz18388gasfm
-cPanel Password: Cp476project
-
 
 
 using defaults functions:

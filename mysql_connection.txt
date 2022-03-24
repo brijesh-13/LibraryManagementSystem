@@ -1,0 +1,50 @@
+
+//navigate to the location of your mysql/bin > run 'mysqld' in cmd
+
+
+// use this to initialize root of the mysql, password set to admin
+mysqladmin -u root password admin
+
+//add user to mysql
+create user bijju@localhost identified by 'Pass1';
+
+//grant database permission to user
+grant all privileges on cp476.* to bijju@localhost;
+
+//see list of users
+select user from mysql.user;  
+
+//shows list of current databases 
+show databases;
+
+//create database
+create database cp476;
+
+//use database cp476
+use cp476;
+
+//create account table
+create table tbl_account(
+id varchar(50) primary key,
+first_name varchar(50),
+last_name varchar(50),
+email varchar(50),
+password varchar(50)
+);
+
+//insert row
+insert into tbl_account(id,first_name,last_name,email,password) values('admin','Admin','','noreply.cp476@gmail.com','admin');
+
+
+//create book table
+create table tbl_book(
+id varchar(50) primary key,
+title varchar(100),
+author varchar(50),
+year int,
+qty int,
+description longtext,
+image text,
+client_id varchar(50)
+);
+
