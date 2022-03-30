@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <base href="<?php echo($rootLocation); ?>" target="_self">
+    <title>Library Management System</title>
+    <base href="<?php echo($rootLocation);?>" target="_self">
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
     <link href="lib/css/defaults.css" rel="stylesheet" />
