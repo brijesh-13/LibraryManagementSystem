@@ -1,4 +1,7 @@
 
+noreply.cp476@gmail.com
+admin
+
 cd C:\Program Files\MySQL\MySQL Server 8.0\bin
 
 mysql -u bijju -p
@@ -13,19 +16,6 @@ show tables;
 select * from tbl_account;
 
 select * from tbl_book;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
