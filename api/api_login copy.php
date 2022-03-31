@@ -3,37 +3,6 @@ include '../controller/dbconn.php';
 
 
 if(isset($_GET['function'])) {
-
-    if($_GET['function'] == 'check_login'){
-        // $password = sha1($_GET['password']);
-        $email = $_GET['email'];
-        $pass = $_GET['password'];
-
-        $query = "SELECT id,first_name,last_name,email FROM tbl_account WHERE email=? AND password=?";
-        $stmt = mysqli_prepare($link , $query);
-        mysqli_stmt_bind_param($stmt, "ss", $email, $pass);
-        
-        if(mysqli_stmt_execute($stmt)){
-            $x = 0;
-            $result = mysqli_stmt_get_result($stmt);
-            while($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
-                $response['id'] = $row['id'];
-                $response['first_name'] = $row['first_name'];
-                $response['last_name'] = $row['last_name'];
-                $response['email'] = $row['email'];
-                $x++;
-            }
-            $response['response'] = 'true';
-            $json_response = json_encode($response);
-            echo $json_response;
-            mysqli_stmt_close($stmt);
-        }else{
-            $response['response'] = 'error';
-            $json_response = json_encode($response);
-            echo $json_response;
-            mysqli_stmt_close($stmt);
-        }
-    }
     
     if($_GET['function'] == 'fetchAccounts'){
         $query = "select * from tbl_account ";
@@ -67,6 +36,35 @@ if(isset($_GET['function'])) {
 }
 
 if(isset($_POST['function'])) {
+    if($_POST['function'] == 'check_login'){
+        $email = $_POST['email'];
+        $pass = $_POST['password'];
+
+        $query = "SELECT id,first_name,last_name,email FROM tbl_account WHERE email=? AND password=?";
+        $stmt = mysqli_prepare($link , $query);
+        mysqli_stmt_bind_param($stmt, "ss", $email, $pass);
+        
+        if(mysqli_stmt_execute($stmt)){
+            $x = 0;
+            $result = mysqli_stmt_get_result($stmt);
+            while($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+                $response['id'] = $row['id'];
+                $response['first_name'] = $row['first_name'];
+                $response['last_name'] = $row['last_name'];
+                $response['email'] = $row['email'];
+                $x++;
+            }
+            $response['response'] = 'true';
+            $json_response = json_encode($response);
+            echo $json_response;
+            mysqli_stmt_close($stmt);
+        }else{
+            $response['response'] = 'error';
+            $json_response = json_encode($response);
+            echo $json_response;
+            mysqli_stmt_close($stmt);
+        }
+    }
     if($_POST['function'] == 'createAccount') {
         $id = $_POST['id'];
         $email = $_POST['email'];
