@@ -64,12 +64,15 @@ if(isset($_GET['function'])) {
         }
     }
 
-    if($_GET['function'] == 'createAccount') {
-        $id = $_GET['id'];
-        $email = $_GET['email'];
-        $first_name = $_GET['first_name'];
-        $last_name = $_GET['last_name'];
-        $password = $_GET['password'];
+}
+
+if(isset($_POST['function'])) {
+    if($_POST['function'] == 'createAccount') {
+        $id = $_POST['id'];
+        $email = $_POST['email'];
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $password = $_POST['password'];
 
         $query = "insert into tbl_account(id,first_name,last_name,email,password) values(?,?,?,?,?);"; 
         $stmt = mysqli_prepare($link , $query);
@@ -87,13 +90,12 @@ if(isset($_GET['function'])) {
             mysqli_stmt_close($stmt);
         }
     }
-    
-    if($_GET['function'] == 'updateAccount') {
-        $id = $_GET['id'];
-        $email = $_GET['email'];
-        $first_name = $_GET['first_name'];
-        $last_name = $_GET['last_name'];
-        $password = $_GET['password'];
+    if($_POST['function'] == 'updateAccount') {
+        $id = $_POST['id'];
+        $email = $_POST['email'];
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $password = $_POST['password'];
 
         $query = "update tbl_account set first_name=?, last_name=?, email=?, password=? where id=?;"; 
         $stmt = mysqli_prepare($link , $query);
@@ -111,9 +113,8 @@ if(isset($_GET['function'])) {
             mysqli_stmt_close($stmt);
         }
     }
-
-    if($_GET['function'] == 'deleteAccount') {
-        $id = $_GET['id'];
+    if($_POST['function'] == 'deleteAccount') {
+        $id = $_POST['id'];
 
         $query = "DELETE FROM tbl_account WHERE id='$id';"; 
 
@@ -130,5 +131,3 @@ if(isset($_GET['function'])) {
         }
     }
 }
-
-

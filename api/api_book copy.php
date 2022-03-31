@@ -35,15 +35,22 @@ if(isset($_GET['function'])) {
         }
     }
     
-    if($_GET['function'] == 'addBook') {
-        $id = $_GET['id'];
-        $title = $_GET['title'];
-        $author = $_GET['author'];
-        $year = intval($_GET['year']);
-        $qty = intval($_GET['qty']);
-        $description = $_GET['description'];
-        $image = $_GET['image'];
-        $client_id = $_GET['client_id'];
+}
+
+
+
+
+
+if(isset($_POST['function'])) {
+    if($_POST['function'] == 'addBook') {
+        $id = $_POST['id'];
+        $title = $_POST['title'];
+        $author = $_POST['author'];
+        $year = intval($_POST['year']);
+        $qty = intval($_POST['qty']);
+        $description = $_POST['description'];
+        $image = $_POST['image'];
+        $client_id = $_POST['client_id'];
 
         $query = "insert into tbl_book(id,title,author,year,qty,description,image,client_id) values(?,?,?,?,?,?,?,?)"; 
         $stmt = mysqli_prepare($link , $query);
@@ -63,15 +70,15 @@ if(isset($_GET['function'])) {
         }
     }
     
-    if($_GET['function'] == 'updateBook') {
-        $id = $_GET['id'];
-        $title = $_GET['title'];
-        $author = $_GET['author'];
-        $year = $_GET['year'];
-        $qty = $_GET['qty'];
-        $description = $_GET['description'];
-        $image = $_GET['image'];
-        $client_id = $_GET['client_id'];
+    if($_POST['function'] == 'updateBook') {
+        $id = $_POST['id'];
+        $title = $_POST['title'];
+        $author = $_POST['author'];
+        $year = $_POST['year'];
+        $qty = $_POST['qty'];
+        $description = $_POST['description'];
+        $image = $_POST['image'];
+        $client_id = $_POST['client_id'];
 
         $query = "update tbl_book set title = ?, author =?, year = ?, qty = ?, description =?, image = ?, client_id =? where id=?"; 
         $stmt = mysqli_prepare($link , $query);
@@ -90,8 +97,8 @@ if(isset($_GET['function'])) {
         }
     }
 
-    if($_GET['function'] == 'deleteBook') {
-        $id = $_GET['id'];
+    if($_POST['function'] == 'deleteBook') {
+        $id = $_POST['id'];
 
         $query = "delete from tbl_book where id=?"; 
         $stmt = mysqli_prepare($link , $query);
@@ -110,9 +117,5 @@ if(isset($_GET['function'])) {
         }
     }
 }
-
-
-
-
 
 
